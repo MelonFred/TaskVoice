@@ -1,8 +1,5 @@
 import app from './app';
-import dotenv from 'dotenv';
-import { PORT } from './config';
-
-dotenv.config();
+import { PORT} from './config';
 
 const server = app.listen(PORT, (err) => {
     if (err) {

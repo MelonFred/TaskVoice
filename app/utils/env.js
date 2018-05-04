@@ -1,4 +1,4 @@
-import envs from '../constants/env';
+import envs from '../constants/envs';
 
 const ENV = process.env.NODE_ENV || 'development';
 const IS_DEV = ENV === envs.development;

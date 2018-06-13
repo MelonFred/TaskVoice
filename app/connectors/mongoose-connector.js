@@ -7,14 +7,8 @@ export default (mongoUri) => {
         throw Error('Mongo URI is undefined');
     }
 
-    return new Promise((res, rej) => {
-        mongoose.connect(mongoUri)
-            .then((mongodb) => {
-                res(mongodb);
-                console.log('Mongo connected');
-            })
-            .catch((err) => {
-                rej(err);
-            });
-    });
+    return mongoose.connect(mongoUri)
+        .then(() => {
+            console.log('Mongo connected');
+        });
 };
